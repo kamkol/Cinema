@@ -7,26 +7,26 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import javax.validation.constraints.FutureOrPresent;
+
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Movie {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    private String name;
 
-    private String description;
+    private String lastName;
 
-    @FutureOrPresent()
     @NotNull
-    private LocalDate localDate;
+    private Integer age;
+
+
 
 }
